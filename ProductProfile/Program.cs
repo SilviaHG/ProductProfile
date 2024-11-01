@@ -1,10 +1,15 @@
 using ProductProfile.Components;
+using ProductProfile.Components.Repositories;
+using ProductProfile.Components.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+//registrando productos
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
