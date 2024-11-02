@@ -1,12 +1,11 @@
-﻿@using global::ProductProfile.Components.Models
-<h3>ProductDetails</h3>
-
+﻿<h3>Detalles del producto</h3>
+<br />
 @if(product != null)
 {
     <div>
-        <h4>Product: @product.Name</h4>
-        <h5>Price: @product.Price</h5>
-        <p>Descrption: @product.Description</p>
+        <h4>Producto: @product.Name</h4>
+        <h5>Precio: @product.Price</h5>
+        <p>Descipción: @product.Description</p>
     </div>
 }
 else
@@ -15,6 +14,7 @@ else
 }
 
 @code {
+
     [Parameter]
     public Product product { get; set; }
 }

@@ -4,6 +4,8 @@ namespace ProductProfile.Components.Repositories.Interfaces
 {
     public interface IProductRepository
     {
-       Product GetProductbyId(int id);
+        Product GetProductbyId(int id);
+
+
     }
 }

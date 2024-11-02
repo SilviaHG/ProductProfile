@@ -1,0 +1,17 @@
+﻿@page "/productprofile"
+@inject IProductRepository productR;
+
+
+<ProductDetails Product="product"></ProductDetails>
+
+@code {
+    private Product product;
+    public int idProduct = 5;
+
+    protected override void OnInitialized()
+    {
+        product = productR.GetProductbyId(idProduct);
+        Console.WriteLine(product != null ? "Usuario obtenido correctamente" : "No se obtuvo ningún usuario");
+
+    }
+}
